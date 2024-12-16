@@ -1,0 +1,19 @@
+keycloak:
+    realm: myrealm
+    auth-server-url: http://localhost:9091
+    client-id: spring-client
+    client-secret: ${CLIENT_SECRET}
+    username: admin
+    password: admin-pw
+    ssl-required: external
+    public-client: false
+    bearer-only: false
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:9433/keycloak
+    username: keycloak
+    password: keycloak-pw
+  jpa:
+    hibernate.ddl-auto: update
